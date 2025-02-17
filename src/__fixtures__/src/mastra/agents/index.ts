@@ -1,7 +1,7 @@
 import { Agent } from '@mastra/core/agent';
 import { openai } from '@ai-sdk/openai';
-import * as tools from '../../../../ycapi';
-import * as hnTools from '../../../../hnapi';
+import * as tools from '../../../../ycapi.js';
+import * as hnTools from '../../../../hnapi.js';
 
 export const ycAgent = new Agent<typeof tools & typeof hnTools>({
     name: 'YC and HN Tools Agent',

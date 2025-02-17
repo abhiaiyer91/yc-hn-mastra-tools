@@ -1,2 +1,2 @@
-export * from './ycapi';
-export * from './hnapi';
+export * from './ycapi.js';
+export * from './hnapi.js';

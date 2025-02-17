@@ -1,13 +1,35 @@
 {
   "name": "yc-hn-tools",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Mastra tools for interacting with YC and Hacker News APIs",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "prepare": "pnpm run clean && pnpm run build",
     "test": "vitest"
   },
-  "keywords": [],
+  "keywords": [
+    "mastra",
+    "ycombinator",
+    "hackernews",
+    "api",
+    "tools"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -16,7 +38,14 @@
   },
   "devDependencies": {
     "@ai-sdk/openai": "^1.1.12",
+    "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
