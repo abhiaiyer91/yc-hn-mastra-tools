@@ -1,0 +1,22 @@
+{
+  "name": "yc-hn-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mastra/core": "0.2.0-alpha.109",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@ai-sdk/openai": "^1.1.12",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  }
+}
