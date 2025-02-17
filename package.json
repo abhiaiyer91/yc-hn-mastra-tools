@@ -1,6 +1,6 @@
 {
-  "name": "yc-hn-tools",
-  "version": "1.0.0",
+  "name": "@mastra/yc-hn-tools",
+  "version": "0.0.2",
   "description": "Mastra tools for interacting with YC and Hacker News APIs",
   "type": "module",
   "main": "./dist/index.js",
