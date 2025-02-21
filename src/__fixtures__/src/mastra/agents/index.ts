@@ -3,9 +3,9 @@ import { openai } from '@ai-sdk/openai';
 import * as tools from '../../../../ycapi.js';
 import * as hnTools from '../../../../hnapi.js';
 
-export const ycAgent = new Agent<typeof tools & typeof hnTools>({
-    name: 'YC and HN Tools Agent',
-    instructions: `You are a helpful assistant that can search and provide information about Y Combinator companies and Hacker News content.
+export const ycAgent: Agent = new Agent({
+   name: 'YC and HN Tools Agent',
+   instructions: `You are a helpful assistant that can search and provide information about Y Combinator companies and Hacker News content.
 
 For YC Companies, you can:
 - Search companies using keywords
@@ -40,12 +40,12 @@ Always format your responses to highlight:
 - Author names
 - Creation dates
 - Relevant excerpts from text when available`,
-    model: openai('gpt-4o-mini'),
-    tools: {
-        searchCompanies: tools.searchCompanies,
-        getCompanyBySlug: tools.getCompanyBySlug,
-        listCompaniesByBatch: tools.listCompaniesByBatch,
-        searchHackerNews: hnTools.searchHackerNews,
-        getTopStories: hnTools.getTopStories,
-    },
+   model: openai('gpt-4o-mini'),
+   tools: {
+      searchCompanies: tools.searchCompanies,
+      getCompanyBySlug: tools.getCompanyBySlug,
+      listCompaniesByBatch: tools.listCompaniesByBatch,
+      searchHackerNews: hnTools.searchHackerNews,
+      getTopStories: hnTools.getTopStories,
+   },
 });

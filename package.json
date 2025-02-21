@@ -1,6 +1,6 @@
 {
   "name": "@mastra/yc-hn-tools",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Mastra tools for interacting with YC and Hacker News APIs",
   "type": "module",
   "main": "./dist/index.js",
@@ -32,12 +32,13 @@
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@mastra/core": "0.2.0-alpha.109",
+  "peerDependencies": {
+    "@mastra/core": "latest",
     "zod": "^3.24.2"
   },
   "devDependencies": {
     "@ai-sdk/openai": "^1.1.12",
+    "ai": "^4.1.43",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3",
     "vitest": "^1.2.2"
